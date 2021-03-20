@@ -1,0 +1,44 @@
+.counter {
+  background-color: #b9d0ed;
+  border-radius: 1rem;
+  margin: 0 auto;
+  margin-top: 5rem;
+  padding: 0 0 2rem 0;
+  max-width: 500px;
+}
+
+.count {
+  font-size: 5rem;
+  font-weight: 500;
+}
+
+.button {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button button {
+  width: 9rem;
+  border-radius: 1rem;
+  border-style: none;
+  height: 3rem;
+  color: white;
+  outline: none;
+  font-size: 1rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.inc-button {
+  background-color: #49d14e;
+}
+
+.dec-button {
+  background-color: #4a60cf;
+}
+
+.reset-button {
+  background-color: #cf4a4a;
+}
