@@ -1,0 +1,55 @@
+.body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.button-container {
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.button-container button {
+  background-color: #1c6aa6;
+  border-style: none;
+  border-radius: 1rem;
+  margin-right: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  color: aliceblue;
+  outline: none;
+}
+
+.resource-container {
+  margin-top: 1rem;
+}
+
+.user {
+  max-width: 550px;
+  padding: 1rem 0;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  background-color: #103a57;
+  color: aliceblue;
+}
+
+.post {
+  max-width: 600px;
+  padding: 1rem 0.1rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  background-color: #103a57;
+  color: aliceblue;
+}
+
+.post h3 {
+  font-size: 1.2rem;
+}
+
+.comment {
+  max-width: 600px;
+  padding: 1rem 0.1rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  background-color: #103a57;
+  color: aliceblue;
+}
