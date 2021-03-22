@@ -4,6 +4,8 @@ Hooks let you use state and other React feature without writing class.
 
 ## :arrow_right: useState
 
+## :arrow_right: useEffect
+
 ## useState
 
 let's you use local state in functional component
@@ -50,4 +52,93 @@ const [token] = useState(() => {
   let token = window.localStorage.getItem("my-token");
   return token || "default#-token#";
 });
+```
+
+## useEffect
+
+Invoked side effects from within functional components.
+
+> Basic side effect
+
+```javascript
+import React, { useEffect } from "react";
+
+const UseEffectHook = () => {
+  useEffect(() => {
+    console.log("It's only runs one when component is mount");
+  }, []);
+
+  return (
+    <div>
+      <h1>Use Effect Hooks</h1>
+    </div>
+  );
+};
+```
+
+> Effect with cleanup
+
+```javascript
+const EffectCleanup = () => {
+  useEffect(() => {
+    const clicked = () => console.log("window clicked");
+    window.addEventListener("click", clicked);
+
+    // return a clean-up function
+    return () => {
+      window.removeEventListener("click", clicked);
+    };
+  }, []);
+
+  return (
+    <div>
+      When you click the window you'll find a message logged to the console
+    </div>
+  );
+};
+```
+
+> Multiple effects
+
+```javascript
+const MultipleEffects = () => {
+  // 🍟
+  useEffect(() => {
+    const clicked = () => console.log("window clicked");
+    window.addEventListener("click", clicked);
+
+    return () => {
+      window.removeEventListener("click", clicked);
+    };
+  }, []);
+
+  // 🍟 another useEffect hook
+  useEffect(() => {
+    console.log("another useEffect call");
+  });
+
+  return <div>Check your console logs</div>;
+};
+```
+
+> Skipping effects (array dependency)
+
+```javascript
+useEffect(() => {
+  setEffectLogs((prevEffectLogs) => [
+    ...prevEffectLogs,
+    "effect fn has been invoked",
+  ]);
+}, []);
+```
+
+> Skipping effects (empty array dependency)
+
+```javascript
+useEffect(() => {
+  setEffectLogs((prevEffectLogs) => [
+    ...prevEffectLogs,
+    "effect fn has been invoked",
+  ]);
+}, []);
 ```
