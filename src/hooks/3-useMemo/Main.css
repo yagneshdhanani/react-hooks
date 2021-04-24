@@ -1,0 +1,32 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  max-width: 52rem;
+  margin: 0 auto;
+  justify-content: center;
+  height: 10rem;
+}
+
+button {
+  position: absolute;
+  align-self: flex-end;
+  margin-right: 1rem;
+  background-color: #2477c9;
+  outline: none;
+  border-radius: 1rem;
+  width: 10rem;
+  height: 2rem;
+  margin-top: 0.5rem;
+  border: none;
+}
+
+label {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  font-weight: 600;
+}
+
+.output-field {
+  display: inline-block;
+}
