@@ -1,0 +1,40 @@
+.input-box {
+  height: 30px;
+  font-size: 25px;
+  background-color: #f3f3f3;
+}
+
+.container {
+  border-radius: 10px;
+  max-width: 700px;
+  margin: auto;
+  padding: 15px 0px 5px 0px;
+  background-color: rgb(96, 174, 238);
+}
+
+.value-container {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+span {
+  font-size: 20px;
+}
+
+.input-container {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.btn {
+  margin-left: 20px;
+  padding: 5px 20px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  outline: none;
+  border: 0px;
+  border-radius: 10px;
+  background-color: rgb(197 206 246);
+}

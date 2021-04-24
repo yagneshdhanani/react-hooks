@@ -8,6 +8,16 @@ Hooks let you use state and other React feature without writing class.
 
 ## :arrow_right: useMemo
 
+## :arrow_right: useRef
+
+## :arrow_right: useContext
+
+## :arrow_right: useReducer
+
+## :arrow_right: useCallback
+
+## :arrow_right: customHook
+
 ## useState
 
 let's you use local state in functional component
@@ -171,5 +181,48 @@ function Component({ param1, param2 }) {
   useEffect(() => {
     callApi(params);
   }, [params]);
+}
+```
+
+## useRef
+
+refs are persisted between renders.
+refs do not cause a component to re-render when changed.
+
+```javascript
+const ref = useRef(initialValue);
+// ref = { current: initialValue}
+```
+
+> Count the number of time a component re-render
+
+```javascript
+function Ref() {
+  const reRenderCount = useRef(0);
+
+  useEffect(() => {
+    reRenderCount.current = reRenderCount.current + 1;
+  });
+
+  return <div>{reRenderCount.current}</div>;
+}
+```
+
+> Working with DOM
+
+```javascript
+function Component() {
+  const inputRef = useRef(null);
+
+  const focusInput = () => {
+    inputRef.current.focus();
+  };
+
+  return (
+    <>
+      <input ref={inputRef} />
+      <button onClick={focusInput}>Focus Input</button>
+    </>
+  );
 }
 ```
