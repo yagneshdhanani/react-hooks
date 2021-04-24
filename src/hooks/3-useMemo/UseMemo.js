@@ -2,7 +2,7 @@ import React, { useState, useMemo } from "react";
 import "./Main.css";
 
 const calSqaure = (num) => {
-  for (let index = 0; index < 10000000; index++) {}
+  for (let index = 0; index < 100000000; index++) {}
   return num * num;
 };
 
@@ -10,7 +10,9 @@ export default function UseMemo() {
   const [number, setNumber] = useState(0);
   const [dark, setDark] = useState(true);
 
-  let sqaure = useMemo(() => calSqaure(number), [number]);
+  let sqaure = useMemo(() => {
+    return calSqaure(number);
+  }, [number]);
 
   const themeStyle = {
     backgroundColor: dark ? "aliceblue" : "black",

@@ -6,6 +6,8 @@ Hooks let you use state and other React feature without writing class.
 
 ## :arrow_right: useEffect
 
+## :arrow_right: useMemo
+
 ## useState
 
 let's you use local state in functional component
@@ -141,4 +143,33 @@ useEffect(() => {
     "effect fn has been invoked",
   ]);
 }, []);
+```
+
+## useMemo
+
+Used to memoized value
+Syntax is same as the useEffect hook
+
+> Memoize the complexFunction which depends on "a"
+
+```javascript
+const result = useMemo(() => {
+  return complexFunction(a);
+}, [a]);
+```
+
+> Referential Equality
+
+Every time component is re-render new object is created and this cause to the effect on useEffect
+
+```javascript
+function Component({ param1, param2 }) {
+  const params = useMemo(() => {
+    return { param1, param2, param3: 5 };
+  }, [param1, param2]);
+
+  useEffect(() => {
+    callApi(params);
+  }, [params]);
+}
 ```

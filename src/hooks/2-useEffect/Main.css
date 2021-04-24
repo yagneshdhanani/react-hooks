@@ -17,6 +17,7 @@
   font-size: 1.1rem;
   color: aliceblue;
   outline: none;
+  cursor: pointer;
 }
 
 .resource-container {
