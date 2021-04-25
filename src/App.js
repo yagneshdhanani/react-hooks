@@ -4,7 +4,8 @@ import "./App.css";
 // import UseMemo from "./hooks/3-useMemo/UseMemo";
 // import UseRef from "./hooks/4-useRef/UseRef";
 // import UseContext from "./hooks/5-useContext/UseContext";
-import UseReducer from "./hooks/6-useReducer/UseReducer";
+// import UseReducer from "./hooks/6-useReducer/UseReducer";
+import UseCallback from "./hooks/7-useCallback/UseCallback";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       {/* <UseMemo /> */}
       {/* <UseRef /> */}
       {/* <UseContext /> */}
-      <UseReducer />
+      {/* <UseReducer /> */}
+      <UseCallback />
     </div>
   );
 }

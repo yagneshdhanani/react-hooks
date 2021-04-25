@@ -293,3 +293,16 @@ function Counter() {
   );
 }
 ```
+
+## useCallback
+
+It return a memoized version of the callback that only changes if one of the dependencies has changed.
+
+> useCallback gives you referential equality between renders for functions.
+> useMemo gives you referential equality between renders for values.
+
+```javascript
+const memoizedCallback = useCallback(() => {
+  doSomething(a, b);
+}, [a, b]);
+```
