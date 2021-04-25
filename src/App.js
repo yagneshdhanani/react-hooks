@@ -5,7 +5,8 @@ import "./App.css";
 // import UseRef from "./hooks/4-useRef/UseRef";
 // import UseContext from "./hooks/5-useContext/UseContext";
 // import UseReducer from "./hooks/6-useReducer/UseReducer";
-import UseCallback from "./hooks/7-useCallback/UseCallback";
+// import UseCallback from "./hooks/7-useCallback/UseCallback";
+import CustomHook from "./hooks/8-customHook/CustomHook";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       {/* <UseRef /> */}
       {/* <UseContext /> */}
       {/* <UseReducer /> */}
-      <UseCallback />
+      {/* <UseCallback /> */}
+      <CustomHook />
     </div>
   );
 }
