@@ -226,3 +226,38 @@ function Component() {
   );
 }
 ```
+
+## useContext
+
+Context provides a way to pass data through the component tree without having to pass props down normally at every level.
+
+```javascript
+import React, { useState, useContext } from "react";
+
+const ThemeContext = React.createContext();
+
+function App() {
+  const [theme, setTheme] = useState("dark");
+
+  return <ThemeContext.Provider value={{theme, setTheme}}>
+    <ChildComponent>
+  </ThemeContext.Provider>;
+}
+
+function ChildComponent() {
+  return <SubChildComponent>
+}
+
+function SubChildComponent() {
+  const {theme, setTheme} = useContext(ThemeContext)
+
+  return(
+    <>
+      <div>theme: {theme}</div>
+      <button onClick={() => setTheme("white")}>Change to white</button>
+    </>
+  )
+}
+
+export default README;
+```
