@@ -1,0 +1,52 @@
+.todos-container {
+  width: 500px;
+  margin: auto;
+  overflow: hidden;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #6e98d5;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: #d7d6dd;
+}
+
+.todo-value {
+  width: 300px;
+  font-size: 18px;
+  overflow-wrap: break-word;
+}
+
+.button-container {
+  display: flex;
+  margin-right: 10px;
+}
+
+.button-container button {
+  margin: 0 10px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  outline: none;
+  background-color: #2a6666;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.input-field {
+  height: 30px;
+  font-size: 25px;
+}
+
+.submit-btn {
+  margin-left: 20px;
+  height: 35px;
+  padding: 5px 10px;
+  font-size: 20px;
+}
